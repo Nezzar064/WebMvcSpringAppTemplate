@@ -7,19 +7,12 @@
 <body>
 <div class="table">
     //example of thymeleaf table
-    <div th:if="${not #lists.isEmpty(movies)}">
+    <!--<div th:if="${not #lists.isEmpty(movies)}"> -->
         <h2>First movie of the list</h2>
         <table class="firstMovieTable">
-            <tr>
-                <th>title</th>
-                <th>popularity</th>
-                <th>awards</th>
-            </tr>
-            <tr th:each="movie : ${movies}">
-                <td th:text="${movie.title}"></td>
-                <td th:text="${movie.popularity}"></td>
-                <td th:text="${movie.awards}"></td>
-            </tr>
+            <ul th:each="derp : ${derpList}">
+                <li th:text="${derp}"></li>
+            </ul>
         </table>
     </div>
 </div>
